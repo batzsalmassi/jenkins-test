@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lab2-app2-pod
+  labels:
+    app: lab2-app2
+    type: front-end
+spec:
+  containers:
+  - name: lab2-app-container
+    image: kubernetes-lab2
+    resources:
+      limits:
+        memory: "512Mi"
+        cpu: "500m"
+      requests:
+        memory: "256Mi"
+        cpu: "250m"
+    ports:
+    - containerPort: 8080
+    
